@@ -18,9 +18,9 @@ public class Application {
     private static void startGame() {
         List<Integer> numbers = Numbers.generate();
 
-        List<Integer> userNumbers;
+        String userNumbers = null;
         do {
-            userNumbers = UserNumbers.parseUserNumbers(UserConsole.enterNumbers());
-        } while (!Match.correctAnswer(numbers, userNumbers));
+        	userNumbers = UserConsole.enterNumbers();
+        } while (!(UserNumbers.isValid(userNumbers) && Match.correctAnswer(numbers, UserNumbers.parseUserNumbers(userNumbers))));
     }
 }
