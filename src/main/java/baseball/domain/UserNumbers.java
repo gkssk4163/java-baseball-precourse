@@ -1,4 +1,4 @@
-package domain;
+package baseball.domain;
 
 import java.util.LinkedList;
 import java.util.List;

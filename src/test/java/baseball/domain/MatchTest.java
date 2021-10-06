@@ -1,5 +1,6 @@
-package domain;
+package baseball.domain;
 
+import baseball.domain.Match;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -30,7 +31,7 @@ class MatchTest {
 		boolean result = Match.correctAnswer(numbers, userNumbers);
 
 		assertThat(result).isTrue();
-		assertThat(captor.toString().trim()).isEqualTo("3스트라이크");
+		assertThat(captor.toString().trim()).contains("3스트라이크");
 	}
 
 	@Test

@@ -1,4 +1,4 @@
-package utils;
+package baseball.view;
 
 import nextstep.utils.Console;
 

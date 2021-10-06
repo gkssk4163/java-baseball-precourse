@@ -1,9 +1,9 @@
 package baseball;
 
-import domain.Match;
-import domain.Numbers;
-import domain.UserNumbers;
-import utils.UserConsole;
+import baseball.domain.Match;
+import baseball.domain.Numbers;
+import baseball.domain.UserNumbers;
+import baseball.view.UserConsole;
 
 import java.util.List;
 
