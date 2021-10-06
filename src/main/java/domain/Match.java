@@ -13,12 +13,11 @@ public class Match {
 			return true;
 		}
 
-		// 정답이 아니면 힌트 출력
-		printHint(numbers, userNumbers);
+		checkHint(numbers, userNumbers);
 		return false;
 	}
 
-	private static void printHint(List<Integer> numbers, List<Integer> userNumbers) {
+	private static void checkHint(List<Integer> numbers, List<Integer> userNumbers) {
 		int strike = 0;
 		int ball = 0;
 
@@ -27,6 +26,10 @@ public class Match {
 			ball += checkBall(numbers, userNumbers, i);
 		}
 
+		printHint(strike, ball);
+	}
+
+	private static void printHint(int strike, int ball) {
 		if (isNothing(strike, ball)) {
 			System.out.println("낫싱");
 			return;
@@ -35,7 +38,6 @@ public class Match {
 		String result = "";
 		result += strike != 0 ? strike + "스트라이크 " : "";
 		result += ball != 0 ? ball + "볼" : "";
-
 		System.out.println(result);
 	}
 
